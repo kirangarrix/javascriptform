@@ -87,7 +87,7 @@ function emailcheck(){
 
 
 function phncheck(){
-    var telcheck = /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/;
+    var telcheck = /^[0-9-+]{10}$/;
     var phn=$("#phn").val();
     if(telcheck.test(phn)&&phn !=='')
     {
@@ -133,13 +133,14 @@ $("#register").submit(function () {
 
     if (email_error === false && password_error === false) {
         alert("Registration Successfull");
-        window.location.href ="./address.html";
-        return false;
+       // window.location.href ="./address.html";
+        return true;
     }
     else if(phoneno_error === false && password2_error === false){
         alert("Registration Successfull");
-        window.location.href ="./address.html";
-        return false;
+       // window.location.href ="./address.html";
+       
+        return true;
        
     }
     else{

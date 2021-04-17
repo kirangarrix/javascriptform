@@ -196,8 +196,8 @@ $("#register").submit(function () {
     
 if (name_error === false&&category_error === false&&description_error === false&&price_error===false&&specification_error===false&&file_error===false&&color_error===false) {
    alert("Registration Successfull");
-   window.location.href ="./viewproduct.html";
-   return false;
+  // window.location.href ="./viewproduct.html";
+   return true;
 }
 else{
    alert("Please Fill the form Correctly");
@@ -207,6 +207,11 @@ else{
 
    
 });
+
+
+
+
+
 
 
 

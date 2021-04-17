@@ -137,8 +137,8 @@ $(document).ready(function () {
          
     if (name_error === false &&  mobile_error === false&& address_error === false&&select_error===false&&postal_error===false) {
         alert("Registration Successfull");
-        window.location.href ="./product.html";
-        return false;
+        //window.location.href ="./product.html";
+        return true;
     }
     else{
         alert("Please Fill the form Correctly");
@@ -147,7 +147,7 @@ $(document).ready(function () {
 
 
         
-    });
+  });
 
 
 

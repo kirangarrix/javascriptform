@@ -5,7 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="fontawesome-free-5.15.2-web/css/all.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="css/index.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -29,9 +29,7 @@
           <li class="nav-item">
             <a class="nav-link" href="product.html">Products</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="login.html">Login</a>
-          </li>         
+          <li> <a href="php/logout.php" class="mx-auto "><button class="btn btn-primary float-right">logout</button></a></li>               
         </ul>
 
         
@@ -43,17 +41,17 @@
       <div class="row">
             <div class="col col-md-12  col-lg-12 d-flex justify-content-center">
 
-                <form id="register">
+                <form id="register" action="php/address.php" method="POST">
                     <div class="form-group">
                       <label for="name" class="text-primary">Name</label>
-                      <input type="text" class="form-control" id="name"  placeholder="Enter name">
+                      <input type="text" name="name" class="form-control" id="name"  placeholder="Enter name">
                       <span class="error_form text-danger" id="name_error"></span>
                       <small id="emailHelp" class="form-text text-muted">We'll never share your name with anyone else.</small>
 
                     </div>
                     <div class="form-group">
                       <label for="tele" class="text-primary">Mobile number</label>
-                      <input type="tel" class="form-control" id="telephn" placeholder="Enter mobile">
+                      <input type="tel" name="phone" class="form-control" id="telephn" placeholder="Enter mobile">
                       <span class="error_form text-danger" id="mobile_error"></span>
 
                     </div>
@@ -67,22 +65,22 @@
                       <label for="" class="text-primary">State</label>
                         <select name="state" id="state" class="form-control">
                             <option value=""></option>
-                            <option value="1">Kannur</option>
-                            <option value="2">Calicut</option>
-                            <option value="3">Thrissur</option>
-                            <option value="4">Eranakulam</option>
+                            <option value="Kannur">Kannur</option>
+                            <option value="Calicut">Calicut</option>
+                            <option value="Thrissur">Thrissur</option>
+                            <option value="Eranakulam">Eranakulam</option>
                         </select>
                         <span class="error_form text-danger" id="select_error"></span>
 
                     </div>
                     <div class="form-group">
                       <label for="" class="text-primary">Postal code</label>
-                        <input type="text" class="form-control" id="postal">
+                        <input type="text" name="postal" class="form-control" id="postal">
                         <span class="error_form text-danger" id="postal_error"></span>
 
                     </div>
                     
-                    <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                    <button type="submit" name="submit" class="btn btn-primary btn-block">Submit</button>
                   </form>
         
             </div>
